@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum Copa do Mundo 2026 — PDF Completo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --azul-fundo:   #020B1A;
+  --azul-esc:     #041628;
+  --azul-mid:     #0A2444;
+  --azul-borda:   #0D3B6E;
+  --azul-elet:    #00A8FF;
+  --ciano:        #00D4FF;
+  --ciano-esc:    #0088CC;
+  --dourado:      #F5C518;
+  --dourado-esc:  #C9940A;
+  --branco:       #FFFFFF;
+  --cinza:        #A0B4CC;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--azul-fundo);color:var(--branco);font-family:'Barlow',sans-serif;overflow-x:hidden}
+
+/* ── FUNDO GLOBAL ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 20%, rgba(0,168,255,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(0,168,255,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(4,22,40,0.8) 0%, transparent 80%);
+}
+
+/* ── TICKER ── */
+.ticker{
+  background:var(--azul-elet);color:#000;
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;
+  letter-spacing:3px;text-transform:uppercase;padding:9px 0;overflow:hidden;
+  white-space:nowrap;position:relative;z-index:10;
+}
+.ticker-inner{display:inline-block;animation:ticker 20s linear infinite}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── HERO ── */
+.hero{
+  position:relative;z-index:1;
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;padding:0 20px 70px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #041628 0%, #020B1A 100%);
+}
+
+/* grade de pontos de fundo */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(0,168,255,0.15) 1px, transparent 1px);
+  background-size:32px 32px;opacity:.35;pointer-events:none;
+}
+/* brilho lateral esq */
+.hero::after{
+  content:'';position:absolute;left:-200px;top:0;width:600px;height:100%;
+  background:radial-gradient(ellipse 60% 80% at 30% 40%, rgba(0,168,255,0.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+
+.hero-inner{position:relative;z-index:2;width:100%;max-width:940px}
+
+/* ── TOPBAR ── */
+.topbar{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 0 22px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:3px;text-transform:uppercase;color:var(--ciano);
+  border-bottom:1px solid rgba(0,212,255,0.2);margin-bottom:28px;
+}
+.topbar span{color:rgba(255,255,255,0.3)}
+
+/* badge */
+.badge-wrap{text-align:center;margin-bottom:12px}
+.badge{
+  display:inline-block;background:var(--dourado);color:#000;
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  padding:5px 18px;
+  clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+  animation:pulse-badge 2s ease-in-out infinite;
+}
+@keyframes pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(245,197,24,.5)}50%{box-shadow:0 0 24px 6px rgba(245,197,24,.35)}}
+
+/* ── HEADLINE ── */
+.headline{text-align:center;margin-bottom:6px}
+.headline .sup{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;
+  letter-spacing:5px;text-transform:uppercase;color:var(--ciano);
+  display:block;margin-bottom:2px;
+}
+.headline h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(88px,19vw,170px);
+  line-height:.88;color:var(--branco);
+  text-shadow:0 0 60px rgba(0,168,255,.25), 3px 3px 0 #000;
+  letter-spacing:2px;
+}
+.headline h1 .dourado{color:var(--dourado)}
+
+.sub-titulo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(30px,6.5vw,52px);
+  text-align:center;color:var(--branco);letter-spacing:3px;margin-bottom:4px;
+}
+.sub-titulo .ciano{color:var(--ciano)}
+
+.tagline{
+  text-align:center;font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:17px;letter-spacing:2px;color:var(--cinza);
+  text-transform:uppercase;margin-bottom:10px;
+}
+
+/* estrelas */
+.stars{display:flex;justify-content:center;gap:5px;margin-bottom:32px}
+.star{color:var(--dourado);font-size:20px}
+
+/* ── PILLS ── */
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:40px}
+.pill{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(0,168,255,.08);
+  border:1px solid rgba(0,168,255,.25);
+  border-radius:4px;padding:10px 18px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:15px;letter-spacing:1px;text-transform:uppercase;
+  color:var(--branco);transition:border-color .2s,background .2s;
+}
+.pill:hover{border-color:var(--ciano);background:rgba(0,168,255,.15)}
+.pill .ico{font-size:18px}
+
+/* ── PREÇO HERO ── */
+.preco-bloco{text-align:center;margin-bottom:28px}
+.apenas{font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:3px;text-transform:uppercase;color:var(--cinza)}
+.preco-grande{
+  font-family:'Bebas Neue',sans-serif;line-height:1;
+  color:var(--branco);
+  text-shadow:0 0 40px rgba(0,168,255,.4);
+}
+.preco-grande .rs{font-size:clamp(36px,7vw,60px);color:var(--ciano)}
+.preco-grande .num{font-size:clamp(80px,16vw,130px)}
+.preco-grande .cents{font-size:clamp(36px,7vw,60px);vertical-align:super;color:var(--ciano)}
+
+/* ── CTA BTN ── */
+.cta-btn{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--azul-elet),var(--ciano-esc));
+  color:#000;font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(22px,4.5vw,36px);letter-spacing:3px;text-transform:uppercase;
+  text-decoration:none;padding:18px 56px;border-radius:5px;border:none;
+  cursor:pointer;position:relative;overflow:hidden;
+  box-shadow:0 4px 30px rgba(0,168,255,.5),0 2px 0 rgba(0,0,0,.4);
+  transition:transform .15s,box-shadow .15s;
+  animation:cta-glow 2.2s ease-in-out infinite;
+}
+@keyframes cta-glow{
+  0%,100%{box-shadow:0 4px 30px rgba(0,168,255,.5),0 2px 0 rgba(0,0,0,.4)}
+  50%{box-shadow:0 4px 60px rgba(0,168,255,.85),0 2px 0 rgba(0,0,0,.4)}
+}
+.cta-btn:hover{transform:translateY(-3px) scale(1.02)}
+.cta-btn::after{
+  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  animation:shine 2.8s ease-in-out infinite;
+}
+@keyframes shine{0%{left:-100%}65%,100%{left:140%}}
+
+.meta-row{
+  margin-top:18px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;
+}
+.meta-item{
+  display:flex;align-items:center;gap:7px;
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;
+  font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cinza);
+}
+.meta-item .check{color:var(--ciano);font-size:18px}
+
+/* ── SEPARADOR ── */
+.sep{
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--azul-elet),var(--ciano),transparent);
+  margin:0;
+}
+
+/* ── SEÇÕES GENÉRICAS ── */
+section{position:relative;z-index:1}
+.sec-titulo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(34px,6vw,60px);text-align:center;letter-spacing:3px;margin-bottom:6px;
+}
+.sec-sub{
+  text-align:center;color:var(--cinza);
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:44px;
+}
+
+/* ── NÚMEROS ── */
+.numeros-sec{background:var(--azul-esc);padding:70px 20px;border-top:1px solid var(--azul-borda);border-bottom:1px solid var(--azul-borda)}
+.numeros-sec::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,168,255,.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;max-width:860px;margin:0 auto}
+.num-card{
+  background:rgba(0,168,255,.06);
+  border:1px solid rgba(0,168,255,.2);
+  border-radius:8px;padding:32px 16px;text-align:center;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.num-card:hover{transform:translateY(-6px);border-color:var(--ciano);box-shadow:0 8px 30px rgba(0,168,255,.2)}
+.num-card .num{
+  font-family:'Bebas Neue',sans-serif;font-size:58px;
+  color:var(--ciano);line-height:1;margin-bottom:4px;
+}
+.num-card .desc{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--cinza);
+}
+
+/* ── O QUE INCLUI ── */
+.inclui-sec{padding:70px 20px}
+.inclui-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  max-width:860px;margin:0 auto;
+}
+@media(max-width:560px){.inclui-grid{grid-template-columns:1fr}}
+.inclui-item{
+  display:flex;align-items:flex-start;gap:14px;
+  background:rgba(0,168,255,.05);
+  border:1px solid rgba(0,168,255,.15);
+  border-left:3px solid var(--ciano);
+  border-radius:6px;padding:18px 20px;
+  transition:background .2s,border-color .2s;
+}
+.inclui-item:hover{background:rgba(0,168,255,.1);border-left-color:var(--dourado)}
+.inclui-item .ico{font-size:22px;flex-shrink:0;margin-top:2px}
+.inclui-item strong{
+  display:block;font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:16px;letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:4px;color:var(--branco);
+}
+.inclui-item span{font-size:14px;color:var(--cinza);line-height:1.5}
+
+/* ── BANDEIRAS ── */
+.flags-sec{
+  background:var(--azul-esc);padding:56px 20px;text-align:center;
+  border-top:1px solid var(--azul-borda);border-bottom:1px solid var(--azul-borda);
+}
+.flags-row{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+  max-width:860px;margin:28px auto 0;
+}
+.flag-item{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;color:var(--cinza);
+  transition:transform .2s,color .2s;cursor:default;
+}
+.flag-item:hover{transform:scale(1.2);color:var(--branco)}
+.flag-item .flag{font-size:28px}
+
+/* ── CONFIANÇA ── */
+.trust-sec{
+  padding:70px 20px;display:flex;justify-content:center;
+}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;width:100%;max-width:860px;
+}
+@media(max-width:600px){.trust-grid{grid-template-columns:1fr}}
+.trust-item{
+  padding:30px 20px;
+  background:rgba(0,168,255,.05);
+  border:1px solid rgba(0,168,255,.15);
+  border-radius:10px;text-align:center;
+  transition:border-color .2s,box-shadow .2s;
+}
+.trust-item:hover{border-color:var(--ciano);box-shadow:0 0 24px rgba(0,168,255,.15)}
+.trust-item .big{font-size:34px;margin-bottom:12px}
+.trust-item strong{
+  display:block;font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:17px;letter-spacing:1px;text-transform:uppercase;
+  color:var(--ciano);margin-bottom:6px;
+}
+.trust-item p{font-size:14px;color:var(--cinza);line-height:1.6}
+
+/* ── CTA FINAL ── */
+.cta-sec{
+  background:linear-gradient(180deg,var(--azul-fundo) 0%,#041E3A 50%,var(--azul-fundo) 100%);
+  padding:80px 20px;text-align:center;position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,168,255,.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.preco-box{
+  display:inline-block;
+  background:rgba(0,168,255,.07);
+  border:2px solid var(--ciano);
+  border-radius:14px;padding:36px 56px;margin-bottom:28px;
+  box-shadow:0 0 60px rgba(0,168,255,.2),inset 0 0 30px rgba(0,168,255,.04);
+  position:relative;
+}
+.preco-box .label-ap{
+  font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;color:var(--cinza);margin-bottom:6px;
+}
+.preco-final{font-family:'Bebas Neue',sans-serif;line-height:1;color:var(--branco)}
+.preco-final .rs{font-size:clamp(32px,5vw,52px);color:var(--ciano)}
+.preco-final .num{font-size:clamp(80px,14vw,120px);color:var(--branco)}
+.preco-final .cents{font-size:clamp(32px,5vw,52px);vertical-align:super;color:var(--ciano)}
+.preco-box .nota{
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--ciano);margin-top:8px;
+}
+
+.cta-footer-row{
+  margin-top:22px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;
+}
+
+/* ── RODAPÉ ── */
+footer{
+  background:#010810;padding:28px 20px;text-align:center;
+  border-top:1px solid var(--azul-borda);
+  font-size:13px;color:#3a5a7a;
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;
+}
+
+/* ── STICKY ── */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(2,11,26,.97);
+  border-top:2px solid var(--ciano);
+  padding:11px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  z-index:100;backdrop-filter:blur(12px);
+  transform:translateY(100%);transition:transform .4s cubic-bezier(.34,1.56,.64,1);
+}
+.sticky.on{transform:translateY(0)}
+.sticky-price{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--ciano);white-space:nowrap}
+.sticky-btn{
+  background:var(--azul-elet);color:#000;
+  font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:2px;
+  text-transform:uppercase;border:none;cursor:pointer;
+  padding:11px 26px;border-radius:5px;flex-shrink:0;
+  transition:background .15s;
+}
+.sticky-btn:hover{background:var(--ciano)}
+
+/* ── BLOCO PROMOÇÃO ── */
+.promo-wrap{text-align:center;margin-bottom:28px}
+.promo-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,#7B1A1A,#C0392B);
+  color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  padding:5px 20px;border-radius:3px;margin-bottom:10px;
+  animation:pulse-badge 2s ease-in-out infinite;
+}
+.promo-de{
+  font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;
+  color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:2px;
+}
+.promo-de span{
+  display:inline-block;
+  text-decoration:line-through;
+  text-decoration-color:rgba(255,80,80,.8);
+  text-decoration-thickness:2px;
+  color:rgba(255,255,255,.4);
+}
+.promo-preco{
+  font-family:'Bebas Neue',sans-serif;line-height:1;
+  color:var(--dourado);
+  text-shadow:0 0 40px rgba(245,197,24,.5),0 0 80px rgba(245,197,24,.2);
+}
+.promo-preco .rs{font-size:clamp(34px,6vw,54px);color:var(--dourado)}
+.promo-preco .num{font-size:clamp(82px,15vw,130px)}
+.promo-preco .cents{font-size:clamp(34px,6vw,54px);vertical-align:super;color:var(--dourado)}
+.promo-economia{
+  display:inline-block;margin-top:8px;
+  background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.35);
+  border-radius:4px;padding:5px 16px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--dourado);
+}
+
+/* Caixa CTA de promoção */
+.preco-box-promo{
+  display:inline-block;
+  background:rgba(245,197,24,.06);
+  border:2px solid var(--dourado);
+  border-radius:14px;padding:36px 56px;margin-bottom:28px;
+  box-shadow:0 0 60px rgba(245,197,24,.2),inset 0 0 30px rgba(245,197,24,.03);
+  position:relative;
+}
+.preco-box-promo::before{
+  content:'🔥 OFERTA ESPECIAL 🔥';
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,#C0392B,#7B1A1A);
+  color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  padding:4px 20px;border-radius:3px;white-space:nowrap;
+}
+.box-de{
+  font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;
+  color:rgba(255,255,255,.4);letter-spacing:1px;margin-bottom:4px;
+}
+.box-de span{
+  text-decoration:line-through;
+  text-decoration-color:rgba(255,80,80,.7);
+  text-decoration-thickness:2px;
+}
+.box-preco-atual{
+  font-family:'Bebas Neue',sans-serif;line-height:1;
+  color:var(--dourado);
+  text-shadow:0 0 40px rgba(245,197,24,.5);
+}
+.box-preco-atual .rs{font-size:clamp(32px,5vw,50px);color:var(--dourado)}
+.box-preco-atual .num{font-size:clamp(80px,14vw,120px)}
+.box-preco-atual .cents{font-size:clamp(32px,5vw,50px);vertical-align:super;color:var(--dourado)}
+.box-economia{
+  display:inline-block;margin-top:8px;
+  background:rgba(245,197,24,.15);border:1px solid rgba(245,197,24,.4);
+  border-radius:4px;padding:5px 16px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--dourado);
+}
+.box-nota{
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;
+  text-transform:uppercase;color:rgba(245,197,24,.6);margin-top:10px;
+}
+
+/* CTA dourado */
+.cta-btn-gold{
+  display:inline-block;
+  background:linear-gradient(135deg,#F5C518,#C9940A);
+  color:#000;font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(22px,4.5vw,36px);letter-spacing:3px;text-transform:uppercase;
+  text-decoration:none;padding:18px 56px;border-radius:5px;border:none;
+  cursor:pointer;position:relative;overflow:hidden;
+  box-shadow:0 4px 30px rgba(245,197,24,.5),0 2px 0 rgba(0,0,0,.4);
+  transition:transform .15s;
+  animation:gold-glow 2.2s ease-in-out infinite;
+}
+@keyframes gold-glow{
+  0%,100%{box-shadow:0 4px 30px rgba(245,197,24,.5),0 2px 0 rgba(0,0,0,.4)}
+  50%{box-shadow:0 4px 60px rgba(245,197,24,.85),0 2px 0 rgba(0,0,0,.4)}
+}
+.cta-btn-gold:hover{transform:translateY(-3px) scale(1.02)}
+.cta-btn-gold::after{
+  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
+  animation:shine 2.8s ease-in-out infinite;
+}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">
+    ⚽ &nbsp;ÁLBUM COPA 2026 COMPLETO &nbsp;·&nbsp; TODAS AS SELEÇÕES &nbsp;·&nbsp; PDF PARA IMPRIMIR &nbsp;·&nbsp; ACESSO IMEDIATO &nbsp;·&nbsp; R$16,90 &nbsp;·&nbsp;
+    ⚽ &nbsp;ÁLBUM COPA 2026 COMPLETO &nbsp;·&nbsp; TODAS AS SELEÇÕES &nbsp;·&nbsp; PDF PARA IMPRIMIR &nbsp;·&nbsp; ACESSO IMEDIATO &nbsp;·&nbsp; R$16,90 &nbsp;·&nbsp;
+    ⚽ &nbsp;ÁLBUM COPA 2026 COMPLETO &nbsp;·&nbsp; TODAS AS SELEÇÕES &nbsp;·&nbsp; PDF PARA IMPRIMIR &nbsp;·&nbsp; ACESSO IMEDIATO &nbsp;·&nbsp; R$16,90 &nbsp;·&nbsp;
+    ⚽ &nbsp;ÁLBUM COPA 2026 COMPLETO &nbsp;·&nbsp; TODAS AS SELEÇÕES &nbsp;·&nbsp; PDF PARA IMPRIMIR &nbsp;·&nbsp; ACESSO IMEDIATO &nbsp;·&nbsp; R$16,90 &nbsp;·&nbsp;
+  </span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="topbar">
+      <span>⚽</span> Copa do Mundo <span>·</span> <strong>FIFA 2026</strong> <span>·</span> World Cup
+    </div>
+
+    <div class="badge-wrap reveal">
+      <span class="badge">✦ Atualizado! ✦</span>
+    </div>
+
+    <div class="headline reveal">
+      <span class="sup">Álbum Digital</span>
+      <h1>PDF<br><span class="dourado">Completo</span></h1>
+    </div>
+
+    <div class="sub-titulo reveal">com <span class="ciano">todas as seleções!</span></div>
+    <div class="tagline reveal">Álbum completo e atualizado · Pronto pra imprimir</div>
+
+    <div class="stars reveal">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+
+    <div class="pills reveal">
+      <div class="pill"><span class="ico">📄</span> PDF Alta Qualidade</div>
+      <div class="pill"><span class="ico">🖨️</span> Pronto pra Imprimir</div>
+      <div class="pill"><span class="ico">🌍</span> Todas as Seleções</div>
+      <div class="pill"><span class="ico">⚡</span> Acesso Imediato</div>
+      <div class="pill"><span class="ico">🔄</span> Álbum Atualizado</div>
+      <div class="pill"><span class="ico">🛡️</span> Compra 100% Segura</div>
+    </div>
+
+    <div class="promo-wrap reveal">
+      <div class="promo-badge">🔥 Promoção por tempo limitado</div>
+      <div class="promo-de">De: <span>R$ 22,90</span></div>
+      <div class="promo-preco">
+        <span class="rs">R$</span><span class="num">16</span><span class="cents">,90</span>
+      </div>
+      <div class="promo-economia">✦ Você economiza R$ 6,00 agora ✦</div>
+    </div>
+
+    <div style="text-align:center" class="reveal">
+      <a href="https://pay.kiwify.com.br/tPQV5Fq" target="_blank" class="cta-btn-gold">⚽ Quero o Álbum Agora!</a>
+      <div class="meta-row">
+        <div class="meta-item"><span class="check">✓</span> Download imediato</div>
+        <div class="meta-item"><span class="check">✓</span> Garantia 7 dias</div>
+        <div class="meta-item"><span class="check">✓</span> Pix / Cartão</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- NÚMEROS -->
+<section class="numeros-sec">
+  <h2 class="sec-titulo reveal">O que você <span style="color:var(--ciano)">recebe</span></h2>
+  <p class="sec-sub reveal">Tudo em um único download</p>
+  <div class="num-grid reveal">
+    <div class="num-card"><div class="num">900+</div><div class="desc">Figurinhas HD</div></div>
+    <div class="num-card"><div class="num">48</div><div class="desc">Seleções completas</div></div>
+    <div class="num-card"><div class="num">32</div><div class="desc">Grupos oficiais</div></div>
+    <div class="num-card"><div class="num">1</div><div class="desc">PDF pronto pra imprimir</div></div>
+  </div>
+</section>
+
+<!-- O QUE INCLUI -->
+<section class="inclui-sec">
+  <h2 class="sec-titulo reveal">O que está <span style="color:var(--dourado)">incluído</span></h2>
+  <p class="sec-sub reveal">Tudo que você precisa para montar o álbum</p>
+  <div class="inclui-grid reveal">
+    <div class="inclui-item">
+      <span class="ico">⚽</span>
+      <div><strong>Todas as figurinhas dos jogadores</strong><span>Nome, data de nascimento, clube e seleção de cada atleta</span></div>
+    </div>
+    <div class="inclui-item">
+      <span class="ico">🏆</span>
+      <div><strong>Álbum completo e numerado</strong><span>Todas as páginas do álbum oficial em alta resolução</span></div>
+    </div>
+    <div class="inclui-item">
+      <span class="ico">🌍</span>
+      <div><strong>Todas as 48 seleções</strong><span>Europa, Américas, África, Ásia e Oceania completas</span></div>
+    </div>
+    <div class="inclui-item">
+      <span class="ico">🖨️</span>
+      <div><strong>Pronto para imprimir</strong><span>Resolução ideal para impressão doméstica ou gráfica</span></div>
+    </div>
+    <div class="inclui-item">
+      <span class="ico">📱</span>
+      <div><strong>Funciona em qualquer dispositivo</strong><span>Celular, tablet, notebook ou computador — PDF universal</span></div>
+    </div>
+    <div class="inclui-item">
+      <span class="ico">🔄</span>
+      <div><strong>Versão atualizada</strong><span>Elencos atualizados para a Copa do Mundo 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- BANDEIRAS -->
+<section class="flags-sec">
+  <h2 class="sec-titulo reveal">Todos os <span style="color:var(--ciano)">países</span></h2>
+  <p class="sec-sub reveal">Todas as seleções classificadas</p>
+  <div class="flags-row reveal">
+    <div class="flag-item"><span class="flag">🇧🇷</span>Brasil</div>
+    <div class="flag-item"><span class="flag">🇦🇷</span>Argentina</div>
+    <div class="flag-item"><span class="flag">🇫🇷</span>França</div>
+    <div class="flag-item"><span class="flag">🇪🇸</span>Espanha</div>
+    <div class="flag-item"><span class="flag">🇬🇧</span>ENG</div>
+    <div class="flag-item"><span class="flag">🇩🇪</span>Alemanha</div>
+    <div class="flag-item"><span class="flag">🇵🇹</span>Portugal</div>
+    <div class="flag-item"><span class="flag">🇳🇱</span>Holanda</div>
+    <div class="flag-item"><span class="flag">🇺🇸</span>EUA</div>
+    <div class="flag-item"><span class="flag">🇲🇽</span>México</div>
+    <div class="flag-item"><span class="flag">🇨🇦</span>Canadá</div>
+    <div class="flag-item"><span class="flag">🇯🇵</span>Japão</div>
+    <div class="flag-item"><span class="flag">🇰🇷</span>Coreia</div>
+    <div class="flag-item"><span class="flag">🇲🇦</span>Marrocos</div>
+    <div class="flag-item"><span class="flag">🇺🇾</span>Uruguai</div>
+    <div class="flag-item"><span class="flag">🇨🇴</span>Colômbia</div>
+    <div class="flag-item"><span class="flag">🇨🇱</span>Chile</div>
+    <div class="flag-item"><span class="flag">🇨🇭</span>Suíça</div>
+    <div class="flag-item"><span class="flag">🇧🇪</span>Bélgica</div>
+    <div class="flag-item"><span class="flag">🇹🇷</span>Turquia</div>
+    <div class="flag-item"><span class="flag">🇸🇦</span>Arábia</div>
+    <div class="flag-item"><span class="flag">🇳🇬</span>Nigéria</div>
+    <div class="flag-item"><span class="flag">🇮🇹</span>Itália</div>
+    <div class="flag-item"><span class="flag">+ 25</span>mais…</div>
+  </div>
+</section>
+
+<!-- CONFIANÇA -->
+<section class="trust-sec">
+  <div class="trust-grid reveal">
+    <div class="trust-item">
+      <div class="big">🛡️</div>
+      <strong>Compra segura</strong>
+      <p>Pagamento 100% criptografado. Pix, cartão de crédito ou débito aceitos.</p>
+    </div>
+    <div class="trust-item">
+      <div class="big">⚡</div>
+      <strong>Acesso imediato</strong>
+      <p>Assim que o pagamento é confirmado, o link de download chega no seu e-mail.</p>
+    </div>
+    <div class="trust-item">
+      <div class="big">↩️</div>
+      <strong>Garantia 7 dias</strong>
+      <p>Não gostou? Devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- CTA FINAL -->
+<section class="cta-sec" id="comprar">
+  <div style="position:relative;z-index:1">
+    <h2 class="sec-titulo reveal">Garanta agora por <span style="color:var(--ciano)">apenas</span></h2>
+    <p class="sec-sub reveal">Oferta por tempo limitado · Não perca!</p>
+
+    <div class="reveal">
+      <div class="preco-box-promo">
+        <div class="box-de">De: <span>R$ 22,90</span></div>
+        <div class="box-preco-atual">
+          <span class="rs">R$</span><span class="num">16</span><span class="cents">,90</span>
+        </div>
+        <div class="box-economia">✦ Economia de R$ 6,00 · Só hoje ✦</div>
+        <div class="box-nota">✦ Pagamento único · Sem mensalidade ✦</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <a href="https://pay.kiwify.com.br/tPQV5Fq" target="_blank" class="cta-btn-gold">⚽ Aproveitar Promoção — R$16,90</a>
+    </div>
+
+    <div class="cta-footer-row reveal">
+      <div class="meta-item"><span class="check">✓</span> Download imediato</div>
+      <div class="meta-item"><span class="check">✓</span> Compra 100% segura</div>
+      <div class="meta-item"><span class="check">✓</span> Garantia de 7 dias</div>
+      <div class="meta-item"><span class="check">✓</span> Pix e cartão</div>
+    </div>
+
+    <p style="margin-top:30px;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--cinza)">
+      Todos os países · Todas as figurinhas · Em alta qualidade · Pronto pra imprimir!
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Álbum Digital Copa · Todos os direitos reservados</p>
+  <p style="margin-top:5px">Este é um produto digital. Após a compra, o acesso é enviado por e-mail automaticamente.</p>
+</footer>
+
+<!-- STICKY -->
+<div class="sticky" id="sticky">
+  <div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cinza)">Álbum Copa 2026 — PDF Completo</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;color:rgba(255,255,255,.4);text-decoration:line-through">R$ 22,90</div>
+    <div class="sticky-price" style="color:var(--dourado)">R$16,90</div>
+  </div>
+  <button class="sticky-btn" onclick="window.open('https://pay.kiwify.com.br/tPQV5Fq','_blank')">Comprar Agora ⚽</button>
+</div>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*70);obs.unobserve(e.target)}
+  });
+},{threshold:.1});
+reveals.forEach(el=>obs.observe(el));
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('sticky').classList.toggle('on',window.scrollY>500);
+});
+</script>
+</body>
+</html>
